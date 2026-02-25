@@ -98,9 +98,6 @@ To print the output in output.txt with only start state and goal state and witho
 ```bash
    java ManuscriptSorter resource/input.txt no 
    ```
-
-> **Note:** Make sure `input.txt` is present in the same directory as the `.java` file before running. To use a custom input file, replace the contents of `input.txt` with your own test cases following the format shown above.
-
 ---
 
 ## Question 2 — Security Bot CSP Scheduler
@@ -114,7 +111,7 @@ Assign 3 security bots (A, B, C) to 4 time slots using a Constraint Satisfaction
 2. **Maintenance Break** — Bot C cannot be assigned to Slot 4.
 3. **Minimum Coverage** — Every bot must appear at least once.
 
-### Input Format (`question2/input.txt`)
+### Input Format (`question2/resource/input.txt`)
 
 ```
 Bots: A, B, C
@@ -133,9 +130,16 @@ Constraint: MinimumCoverage
 2. Once the Codespace terminal loads, run:
    ```bash
    cd question2
-   javac SecurityBotCSP.java
-   java SecurityBotCSP
+   javac *.java
    ```
+   To print the output in output.txt
+   ```bash
+   java SecurityBotCSP > resource/output.txt
+   ```
+To print the output in console
+   ```bash
+   java SecurityBotCSP 
+  ```
 
 3. The solver prints the step-by-step MRV trace, forward checking inferences, final schedule, constraint verification, and performance metrics.
 
@@ -146,12 +150,14 @@ Constraint: MinimumCoverage
 **Steps:**
 ```bash
 git clone https://github.com/g25ait2119/AI-Assignment-CSL7610-g25ait2119.git
+```
+OR
+unzip the source code zip file AI-Assignment-CSL7610-g25ait2119.zip
+```bash
 cd AI-Assignment-CSL7610-g25ait2119/question2
-javac SecurityBotCSP.java
-java SecurityBotCSP
+javac *.java
 ```
 
-> **Note:** The program reads from `input.txt` in the current working directory. You can also pass a custom file path as an argument:
 > ```bash
 > java SecurityBotCSP path/to/custom_input.txt
 > ```
