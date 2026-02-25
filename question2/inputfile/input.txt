@@ -1,0 +1,5 @@
+Bots: A, B, C
+Slots: 1, 2, 3, 4
+Constraint: NoBackToBack
+Constraint: MaintenanceBreak C 4
+Constraint: MinimumCoverage
