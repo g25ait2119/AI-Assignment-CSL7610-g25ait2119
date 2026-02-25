@@ -75,6 +75,13 @@ git clone https://github.com/g25ait2119/AI-Assignment-CSL7610-g25ait2119.git
 cd AI-Assignment-CSL7610-g25ait2119/question1
 javac *.java
 ```
+OR
+unzip the source code zip file AI-Assignment-CSL7610-g25ait2119.zip
+```bash
+cd AI-Assignment-CSL7610-g25ait2119/question1
+javac *.java
+```
+
 To print the output in output.txt with intermediate states trace use below command
 ```bash
    java ManuscriptSorter resource/input.txt yes > resource/output.txt
