@@ -118,19 +118,10 @@ public class AStarSearch {
     }
 
     public static void main(final String[] args) {
-        final String inputFile = args.length > 0 ? args[0] : "inputfile/input.txt";
+        final String inputFile = args.length > 0 ? args[0] : "resource/input.txt";
         final List<int[][]> puzzles = PuzzleState.readInputMultipleLines(inputFile);
 
-        final boolean printTrace;
-        if(args.length > 1){
-            printTrace="y".equalsIgnoreCase(args[1]) ||"yes".equalsIgnoreCase(args[1]);
-        }else{
-            final Scanner inputScanner = new Scanner(System.in);
-            System.out.print("Print intermediate steps? (yes/no): ");
-            final String logTrace = inputScanner.nextLine().trim().toLowerCase();
-            printTrace="y".equalsIgnoreCase(logTrace) ||"yes".equalsIgnoreCase(logTrace);
-        }
-
+        final boolean printTrace= args.length > 1 && ("y".equalsIgnoreCase(args[1]) || "yes".equalsIgnoreCase(args[1]));
         if (puzzles.isEmpty()) return;
 
 

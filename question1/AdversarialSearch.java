@@ -268,7 +268,7 @@ public class AdversarialSearch {
     }
 
     public static void main(final String[] args) {
-        final String inputFile = args.length > 0 ? args[0] : "inputfile/input.txt";
+        final String inputFile = args.length > 0 ? args[0] : "resource/input.txt";
         final List<int[][]> puzzles = PuzzleState.readInputMultipleLines(inputFile);
 
         if (puzzles.isEmpty()) return;

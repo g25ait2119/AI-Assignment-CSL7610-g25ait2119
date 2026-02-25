@@ -6,15 +6,13 @@ import java.util.Scanner;
 public class ManuscriptSorter {
 
     public static void main(String[] args) throws Exception {
-        final String inputFile = args.length > 0 ? args[0] : "inputfile/input.txt";
+        final String inputFile = args.length > 0 ? args[0] : "resource/input.txt";
 
         System.out.println("$".repeat(60));
         System.out.println("$  MANUSCRIPT SORTING PROBLEM - COMPLETE ANALYSIS");
         System.out.println("$".repeat(60)+"\n");
 
-        final Scanner inputScanner = new Scanner(System.in);
-        System.out.print("Print intermediate steps? (yes/no): ");
-        final String logTrace = inputScanner.nextLine().trim().toLowerCase();
+        final String logTrace = args.length > 1 ? args[1] : "no";
 
         // Execute each algorithm's main method
         System.out.println("*".repeat(60));
